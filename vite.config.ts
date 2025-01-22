@@ -10,5 +10,10 @@ export default defineConfig({
     alias: {
       "$": join(__dirname, "src")
     }
-  }
+  },
+  server: {
+    port: 8000,
+    allowedHosts: ["example.local", "melvdouc.local"]
+  },
+  base: "/json-form/"
 });
