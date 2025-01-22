@@ -1,13 +1,33 @@
-import { getDefaultValue, JsonDictionary } from "$/helpers/json-types";
+import { type JsonDictionary } from "$/helpers/json-types";
 
 const DATA_KEY = "json-form-data";
+
+const DEFAULT_DATA = {
+  title: "Poems",
+  publishedYear: 1846,
+  authors: [
+    {
+      name: "Emily Brontë",
+      born: 1818,
+      ownBooks: [
+        "Wuthering Heights"
+      ]
+    },
+    "Charlotte Brontë",
+    "Anne Brontë"
+  ]
+};
+
+function getDefaultData() {
+  return structuredClone(DEFAULT_DATA);
+}
 
 export function getSavedData(): JsonDictionary {
   try {
     const data = localStorage.getItem(DATA_KEY);
-    return data ? JSON.parse(data) : getDefaultValue("dictionary");
+    return data ? JSON.parse(data) : getDefaultData();
   } catch {
-    return getDefaultValue("dictionary") as JsonDictionary;
+    return getDefaultData() as JsonDictionary;
   }
 }
 
