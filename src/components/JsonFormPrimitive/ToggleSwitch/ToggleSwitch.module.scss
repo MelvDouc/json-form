@@ -1,33 +1,38 @@
-$track-height: 1.5em;
-$track-width: $track-height * 1.8;
+$track-height: 2em;
+$track-width: 66px;
 $track-padding-block: 2px;
 $track-padding-inline: $track-padding-block * 2;
 
 .ToggleSwitch {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
   user-select: none;
 
   .Track {
+    --slider-bg-clr: rgb(225, 0, 0);
     height: $track-height;
     width: $track-width;
     border-radius: 99999px;
     position: relative;
-    background-color: rgb(175, 175, 175);
+    background-color: white;
     transition: all var(--animation-duration) ease-out;
     cursor: pointer;
 
     &::before {
-      content: "";
+      content: "F";
+      transition: inherit;
       height: calc(100% - $track-padding-block * 2);
       aspect-ratio: 1;
       border-radius: 50%;
+      background-color: var(--slider-bg-clr);
       position: absolute;
       top: 50%;
       right: calc(100% - $track-padding-inline);
       translate: 100% -50%;
-      background-color: white;
-      transition: inherit;
+      font-size: 10px;
+      text-align: center;
+      align-content: center;
     }
   }
 
@@ -35,9 +40,10 @@ $track-padding-inline: $track-padding-block * 2;
     display: none;
 
     &:checked+.Track {
-      background-color: rgb(242, 73, 174);
+      --slider-bg-clr: rgb(0, 225, 0);
 
       &::before {
+        content: "T";
         right: $track-padding-inline;
         translate: 0 -50%;
       }
