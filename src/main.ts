@@ -1,24 +1,16 @@
 import { initDsx } from "@melvdouc/dsx";
 import App from "$/App";
 import "./style.scss";
+import favicon from "/favicon.png";
 
 initDsx();
 
-// const data = {
-//   title: "Poems",
-//   publishedYear: 1846,
-//   authors: [
-//     {
-//       name: "Emily Brontë",
-//       born: 1818,
-//       ownBooks: [
-//         "Wuthering Heights"
-//       ]
-//     },
-//     "Charlotte Brontë",
-//     "Anne Brontë"
-//   ]
-// };
+(() => {
+  const link = document.createElement("link");
+  link.rel = "icon";
+  link.href = favicon;
+  link.type = "image/png";
+  document.head.append(link);
+})();
 
-// const form = JsonForm({ value: data });
 document.body.append(App());
