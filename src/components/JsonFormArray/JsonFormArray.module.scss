@@ -1,0 +1,20 @@
+.JsonFormArray {
+  $border: 1px ridge transparent;
+  border: $border;
+  padding: var(--gap2);
+  background: radial-gradient(circle farthest-corner at 10% 20%, rgba(54, 123, 252, 1) 16.3%, rgba(0, 41, 118, 1) 100.2%);
+
+  ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap3);
+
+    li {
+      &:not(*:first-child) {
+        padding-top: var(--gap3);
+        border-top: 1px solid black;
+      }
+    }
+  }
+}

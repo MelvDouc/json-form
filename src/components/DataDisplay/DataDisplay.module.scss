@@ -1,0 +1,18 @@
+.DataDisplay {
+  h2 {
+    margin-bottom: var(--gap4);
+  }
+
+  .PseudoLink {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: var(--gap4);
+  }
+
+  .Data {
+    padding: var(--gap2);
+    font-family: "Fira Code", "Ubuntu Mono", Consolas, "Liberation Mono", "Courier New", monospace;
+    background: lightgray;
+  }
+}

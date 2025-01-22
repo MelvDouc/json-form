@@ -1,0 +1,32 @@
+.JsonForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap4);
+
+  &Body {
+    display: contents;
+  }
+
+  &Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      all: unset;
+      display: inline-block;
+      height: 24px;
+      padding: var(--gap2);
+      border-radius: 4px;
+      text-align: center;
+      align-content: center;
+      cursor: pointer;
+      background: linear-gradient(to right, blue, darkblue);
+      color: white;
+    }
+  }
+
+  legend {
+    text-align: center;
+  }
+}

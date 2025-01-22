@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Syne+Mono&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --gap-min: 0.25em;
+  --gap1: var(--gap-min);
+  --gap2: calc(var(--gap-min) * 2);
+  --gap3: calc(var(--gap-min) * 3);
+  --gap4: calc(var(--gap-min) * 4);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  margin: 1em;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1em;
+}

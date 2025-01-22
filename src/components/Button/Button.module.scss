@@ -1,0 +1,37 @@
+@use "sass:color";
+
+.Button {
+  all: unset;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  text-align: center;
+  align-content: center;
+  cursor: pointer;
+  color: white;
+  transition: 200ms;
+
+  &:active {
+    scale: 0.9;
+  }
+
+  &[data-kind="add"] {
+    --bs-blur: 2px;
+    $clr-bg: rgb(255, 100, 0);
+    background-color: $clr-bg;
+    box-shadow: 1px 1px var(--bs-blur) 0px color.adjust($color: $clr-bg, $lightness: 10%);
+
+    &:hover {
+      --bs-blur: 6px;
+    }
+  }
+
+  &[data-kind="delete"] {
+    background-color: red;
+  }
+
+  &[data-kind="arrow"] {
+    background-color: purple;
+  }
+}

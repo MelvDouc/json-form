@@ -1,0 +1,46 @@
+$track-height: 1.5em;
+$track-width: $track-height * 1.8;
+$track-padding-block: 2px;
+$track-padding-inline: $track-padding-block * 2;
+
+.ToggleSwitch {
+  display: flex;
+  justify-content: center;
+  user-select: none;
+
+  .Track {
+    height: $track-height;
+    width: $track-width;
+    border-radius: 99999px;
+    position: relative;
+    background-color: rgb(175, 175, 175);
+    transition: all var(--animation-duration) ease-out;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      height: calc(100% - $track-padding-block * 2);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      right: calc(100% - $track-padding-inline);
+      translate: 100% -50%;
+      background-color: white;
+      transition: inherit;
+    }
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked+.Track {
+      background-color: rgb(242, 73, 174);
+
+      &::before {
+        right: $track-padding-inline;
+        translate: 0 -50%;
+      }
+    }
+  }
+}

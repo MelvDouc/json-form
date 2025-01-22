@@ -1,0 +1,25 @@
+.JsonFormDict {
+  border: 0;
+  border-radius: 5px;
+  padding: var(--gap3);
+  color: white;
+  background: radial-gradient(circle 900px at 47.1% 47.8%, rgba(8, 208, 115, 1) 0%, rgb(39, 44, 40) 100%);
+
+  & dl {
+    & dt {
+      padding-block: var(--gap2);
+
+      &:first-child {
+        padding-block-start: 0;
+      }
+
+      &:not(*:first-child) {
+        border-top: 1px solid black;
+      }
+    }
+
+    & dd {
+      margin-bottom: var(--gap2);
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.JsonFormKey {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  gap: var(--gap1);
+  font-weight: bold;
+  margin-bottom: var(--gap3);
+
+  & .Controls {
+    display: flex;
+    gap: 2px;
+  }
+}

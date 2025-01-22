@@ -1,0 +1,13 @@
+.JsonFormCharInput {
+  width: 100%;
+  padding-block: 8px;
+  padding-inline-start: 4px;
+  border: 0;
+  outline: none;
+  background-color: white;
+  font-family: inherit;
+
+  &:focus {
+    background-color: rgb(255, 255, 169);
+  }
+}
